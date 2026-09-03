@@ -2,3 +2,18 @@ import atletas.*
 import elementos.*
 import disciplinas.*
 
+describe "test del ejercicio de victoriaDPorte"{
+
+    test "Victoria se quiere parecer a Pareto"{
+        victoria.cambiarDisciplina(judo)
+        victoria.cambiarElemento(judogi)
+        victoria.cambiarAltura(150)
+        assert.equals(365, victoria.presupuesto())
+    }
+
+    test "Victoria se quiere parecer a Delpo, mide 210c, y necesita raqueta"{
+        victoria.cambiarAltura(210)
+        tenis.cambiarEntrenadores(2)
+        assert.equals(580, victoria.presupuesto())
+    }
+}
